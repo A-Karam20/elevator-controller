@@ -22,4 +22,4 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y cppcheck
 
       - name: Run cppcheck
-        run: cppcheck --enable=all --inconclusive --no-check-config --error-exitcode=1 firmware/src/
+        run: cppcheck --enable=all --inconclusive --suppress=missingInclude --suppress=missingIncludeSystem --error-exitcode=1 firmware/src/
